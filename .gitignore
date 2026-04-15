@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Uploads (user-generated content, not versioned)
+uploads/
+
+# Node.js
+node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing / Coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Alembic auto-generated (keep manual migrations)
+# Nothing to ignore here since we use manual migrations
+
+# Docker
+*.log
+
+# Misc
+*.bak
+*.tmp

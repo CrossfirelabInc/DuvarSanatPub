@@ -1,0 +1,12 @@
+{
+  "name": "DuvarSanat",
+  "short_name": "DuvarSanat",
+  "description": "The living archive of Istanbul's street art",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#e94560",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

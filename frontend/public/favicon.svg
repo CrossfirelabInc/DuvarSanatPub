@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e94560"/>
+      <stop offset="100%" stop-color="#c73350"/>
+    </linearGradient>
+    <!-- Spray texture -->
+    <filter id="spray">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="3"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0 0 0 0 0 1 1 0 0 1"/>
+      </feComponentTransfer>
+      <feComposite in="SourceGraphic" operator="in"/>
+    </filter>
+    <!-- Rough edge filter -->
+    <filter id="rough">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <!-- Dark wall background -->
+  <rect width="512" height="512" rx="80" fill="#1a1a2e"/>
+  <!-- Brick texture -->
+  <g opacity="0.08" stroke="#fff" stroke-width="2" fill="none">
+    <line x1="0" y1="85" x2="512" y2="85"/>
+    <line x1="0" y1="170" x2="512" y2="170"/>
+    <line x1="0" y1="255" x2="512" y2="255"/>
+    <line x1="0" y1="340" x2="512" y2="340"/>
+    <line x1="0" y1="425" x2="512" y2="425"/>
+    <line x1="60" y1="0" x2="60" y2="85"/>
+    <line x1="200" y1="0" x2="200" y2="85"/>
+    <line x1="350" y1="0" x2="350" y2="85"/>
+    <line x1="130" y1="85" x2="130" y2="170"/>
+    <line x1="280" y1="85" x2="280" y2="170"/>
+    <line x1="430" y1="85" x2="430" y2="170"/>
+    <line x1="80" y1="170" x2="80" y2="255"/>
+    <line x1="240" y1="170" x2="240" y2="255"/>
+    <line x1="400" y1="170" x2="400" y2="255"/>
+    <line x1="150" y1="255" x2="150" y2="340"/>
+    <line x1="300" y1="255" x2="300" y2="340"/>
+    <line x1="450" y1="255" x2="450" y2="340"/>
+    <line x1="100" y1="340" x2="100" y2="425"/>
+    <line x1="260" y1="340" x2="260" y2="425"/>
+    <line x1="380" y1="340" x2="380" y2="425"/>
+    <line x1="60" y1="425" x2="60" y2="512"/>
+    <line x1="210" y1="425" x2="210" y2="512"/>
+    <line x1="360" y1="425" x2="360" y2="512"/>
+  </g>
+  <!-- Paint splatter behind text -->
+  <circle cx="180" cy="260" r="140" fill="#e94560" opacity="0.15" filter="url(#rough)"/>
+  <circle cx="340" cy="240" r="130" fill="#e94560" opacity="0.12" filter="url(#rough)"/>
+  <!-- Graffiti "D" - bold, tilted, with thick outline -->
+  <g transform="translate(68, 100) rotate(-5, 128, 160)">
+    <!-- D shadow -->
+    <text x="4" y="288" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="#000" opacity="0.4" letter-spacing="-5" font-style="italic">D</text>
+    <!-- D outline -->
+    <text x="0" y="285" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="none" stroke="#fff" stroke-width="12" letter-spacing="-5" font-style="italic">D</text>
+    <!-- D fill -->
+    <text x="0" y="285" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="#e94560" letter-spacing="-5" font-style="italic">D</text>
+    <!-- D inner highlight -->
+    <text x="-2" y="282" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="none" stroke="#ff6b81" stroke-width="2" letter-spacing="-5" font-style="italic" opacity="0.6">D</text>
+  </g>
+  <!-- Graffiti "S" - overlapping, different angle -->
+  <g transform="translate(218, 108) rotate(3, 128, 160)">
+    <!-- S shadow -->
+    <text x="4" y="288" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="#000" opacity="0.4" letter-spacing="-5" font-style="italic">S</text>
+    <!-- S outline -->
+    <text x="0" y="285" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="none" stroke="#fff" stroke-width="12" letter-spacing="-5" font-style="italic">S</text>
+    <!-- S fill -->
+    <text x="0" y="285" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="#f0c040" letter-spacing="-5" font-style="italic">S</text>
+    <!-- S inner highlight -->
+    <text x="-2" y="282" font-size="320" font-family="Impact, Arial Black, sans-serif" font-weight="900" fill="none" stroke="#ffe066" stroke-width="2" letter-spacing="-5" font-style="italic" opacity="0.6">S</text>
+  </g>
+  <!-- Paint drips -->
+  <g opacity="0.85">
+    <!-- Drip from D -->
+    <path d="M155 385 Q155 420 152 445 Q150 460 155 470 Q157 475 153 475 Q149 475 151 465 Q148 445 150 420 Q150 400 155 385Z" fill="#e94560"/>
+    <!-- Drip from S -->
+    <path d="M365 375 Q366 415 363 450 Q361 480 365 500 Q367 510 363 510 Q359 510 361 500 Q358 475 360 445 Q360 410 365 375Z" fill="#f0c040"/>
+    <!-- Short drip -->
+    <path d="M310 390 Q311 410 308 425 Q307 432 310 432 Q313 432 312 425 Q314 410 310 390Z" fill="#f0c040" opacity="0.7"/>
+  </g>
+  <!-- Spray dots -->
+  <g fill="#e94560" opacity="0.4">
+    <circle cx="90" cy="140" r="3"/>
+    <circle cx="75" cy="180" r="2"/>
+    <circle cx="105" cy="155" r="2.5"/>
+    <circle cx="420" cy="130" r="3"/>
+    <circle cx="440" cy="165" r="2"/>
+    <circle cx="410" cy="150" r="2"/>
+  </g>
+  <g fill="#f0c040" opacity="0.3">
+    <circle cx="430" cy="350" r="3"/>
+    <circle cx="445" cy="370" r="2"/>
+    <circle cx="85" cy="360" r="2.5"/>
+    <circle cx="70" cy="380" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+geoalchemy2[shapely]==0.15.2
+alembic==1.14.1
+pydantic[email]==2.10.4
+pydantic-settings==2.7.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.20
+python-dotenv==1.0.1
+aiofiles==24.1.0
+slowapi==0.1.9
+# BE-9: Image matching with CLIP + pgvector
+pgvector==0.3.6
+open-clip-torch==2.29.0
+Pillow==11.1.0
+numpy>=1.26.0
+# NOTE: Install torch and torchvision CPU-only separately:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.1
