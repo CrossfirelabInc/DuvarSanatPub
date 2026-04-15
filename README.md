@@ -23,6 +23,23 @@ lokalde ayağa kaldırılıp test edilebilir.
   hesabının moderasyon üzerinden sahiplenilmesi, aynı duvar resminin farklı
   versiyonlarının karşılaştırılması
 
+## Ekran Görüntüleri
+
+<table>
+  <tr>
+    <td><img src="pictures/1.PNG" alt="Ekran 1" width="100%"></td>
+    <td><img src="pictures/2.PNG" alt="Ekran 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="pictures/3.PNG" alt="Ekran 3" width="100%"></td>
+    <td><img src="pictures/4.PNG" alt="Ekran 4" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="pictures/5.PNG" alt="Ekran 5" width="100%"></td>
+    <td><img src="pictures/6.PNG" alt="Ekran 6" width="100%"></td>
+  </tr>
+</table>
+
 ## Lokalde Çalıştırma
 
 ```bash
