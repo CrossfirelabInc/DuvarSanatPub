@@ -46,8 +46,6 @@ lokalde ayağa kaldırılıp test edilebilir.
 docker compose up --build
 ```
 
-Frontend: `http://localhost:5173`
-Backend API: `http://localhost:8000`
 
 ## Durum
 
